@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "figure.h"
+#include <QMessageBox>
 
 class Area : public QWidget
 {

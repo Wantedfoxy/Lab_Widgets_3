@@ -7,6 +7,17 @@ Area::Area(QWidget *parent):QWidget(parent)
     // Создание объектов MyLine и MyRect
     myline=new MyLine(80,100,50);
     myrect=new MyRect(220,100,50);
+    if (myline == nullptr or myrect == nullptr)
+    {
+        QMessageBox meesageBox(QMessageBox::Information,
+                               "Счетчик",
+                               "Ошибка: невозможно выделить память. Пожалуйста, перезапустите приложение!",
+                               QMessageBox::Ok);
+        // Запускаем диалоговое окно сообщения msgBox и блокирует дальнейшее выполнение
+        // программы до тех пор, пока пользователь не закроет это окно
+        meesageBox.exec();
+        exit(0);
+    };
     // Установка начального значения угла поворота
     alpha=0;
 }

@@ -13,19 +13,6 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>560</y>
-     <width>371</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Завершить</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

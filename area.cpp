@@ -7,6 +7,7 @@ Area::Area(QWidget *parent):QWidget(parent)
     // Создание объектов MyLine и MyRect
     myline=new MyLine(80,100,50);
     myrect=new MyRect(220,100,50);
+<<<<<<< HEAD
     if (myline == nullptr or myrect == nullptr)
     {
         QMessageBox meesageBox(QMessageBox::Information,
@@ -18,6 +19,8 @@ Area::Area(QWidget *parent):QWidget(parent)
         meesageBox.exec();
         exit(0);
     };
+=======
+>>>>>>> main
     // Установка начального значения угла поворота
     alpha=0;
 }

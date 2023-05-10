@@ -4,11 +4,16 @@
 Widget::Widget()
 {
 // Установка заголовка окна
+<<<<<<< HEAD
 setWindowTitle("Вращение фигур");
+=======
+setWindowTitle("Обработка событий");
+>>>>>>> main
 // Создание объектов Area и QPushButton и добавление их на форму
 area = new Area( this );
 btn = new QPushButton("Завершить", this);
 QVBoxLayout *layout = new QVBoxLayout(this);
+<<<<<<< HEAD
 if(area == nullptr or btn == nullptr or layout == nullptr)
 {
     QMessageBox meesageBox(QMessageBox::Information,
@@ -20,6 +25,8 @@ if(area == nullptr or btn == nullptr or layout == nullptr)
     meesageBox.exec();
     exit(0);
 };
+=======
+>>>>>>> main
 layout->addWidget(area);
 layout->addWidget(btn);
 // Установка соединения между кнопкой и слотом закрытия окна
@@ -28,8 +35,12 @@ connect(btn, SIGNAL(clicked(bool)),this,SLOT(close()));
 
 // Деструктор класса Widget
 Widget::~Widget()
+<<<<<<< HEAD
 {
     delete area;
     delete btn;
 }
+=======
+{}
+>>>>>>> main
 

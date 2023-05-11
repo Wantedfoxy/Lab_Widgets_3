@@ -10,16 +10,7 @@ area = new Area( this );
 btn = new QPushButton("Завершить", this);
 QVBoxLayout *layout = new QVBoxLayout(this);
 if(area == nullptr or btn == nullptr or layout == nullptr)
-{
-    QMessageBox meesageBox(QMessageBox::Information,
-                           "Счетчик",
-                           "Ошибка: невозможно выделить память. Пожалуйста, перезапустите приложение!",
-                           QMessageBox::Ok);
-    // Запускаем диалоговое окно сообщения msgBox и блокирует дальнейшее выполнение
-    // программы до тех пор, пока пользователь не закроет это окно
-    meesageBox.exec();
-    exit(0);
-};
+{throw std::bad_alloc();};
 
 layout->addWidget(area);
 layout->addWidget(btn);
